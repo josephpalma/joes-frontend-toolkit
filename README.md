@@ -4,9 +4,7 @@
 
 ####Backgrounds
 Simple Waves Animation [https://codingthai.com/simple-waves-animation/]
-Patterns [https://bansal.io/pattern-css#installation]
 Wicked background [https://wickedbackgrounds.com/backgrounds.html]
 
-####Buttons
-Funky Button [https://jsfiddle.net/hLwxratf/]
-
+####Features
+Sparkle Text [https://www.joshwcomeau.com/react/animated-sparkles-in-react/]
