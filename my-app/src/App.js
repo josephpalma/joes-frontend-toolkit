@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <Landing />
       <div class="content flex">
-        <p>Coding thai | 2021 | Free to use</p>
+        <p> Joseph Palma | 2021 </p>
       </div>
     </div>
   );

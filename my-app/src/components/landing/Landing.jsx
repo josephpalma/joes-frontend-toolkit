@@ -1,22 +1,19 @@
 import * as React from 'react';
 import './landing.css';
 import logo from '../../assets/logo.svg';
+import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 
 function Landing() {
 
   return (
     <div>
       <div class="header">
-
         {/* <!--Content before waves--> */}
+        <canvas id="gradient-canvas" data-transition-in>
+        </canvas>
         <div class="inner-header flex">
-          {/* <!--Just the logo.. Don't mind this--> */}
           <img src={logo} class="App-logo" alt="logo" width="150px" height="150px"/>
-          <svg version="1.1" class="logo" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-            xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500" xmlSpace="preserve">
-            <path fill="#FFFFFF" stroke="#000000" stroke-width="10" stroke-miterlimit="10" d="M57,283" />
-          </svg>
-          <h1>Palms Design Tools</h1>
+          <h1><Sparkles>Palms</Sparkles> Design Tools</h1>
         </div>
 
         {/* <!--Waves Container--> */}
