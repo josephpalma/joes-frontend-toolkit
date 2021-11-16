@@ -1,13 +1,12 @@
 import './App.css';
 import Landing from './components/landing/Landing.jsx';
+import Footer from './components/footer/Footer.jsx';
 
 function App() {
   return (
     <div className="App">
       <Landing />
-      <div class="content flex">
-        <p> Joseph Palma | 2021 </p>
-      </div>
+      <Footer />
     </div>
   );
 }

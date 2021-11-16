@@ -1,0 +1,12 @@
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.content {
+  position:relative;
+  text-align:center;
+  background-color: white;
+}
