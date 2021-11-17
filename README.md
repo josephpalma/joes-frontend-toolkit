@@ -1,10 +1,10 @@
-##Palms Design Tools
+## Palms Design Tools
 
-###Ready to use code for any design project.
+### Ready to use code for any design project.
 
-####Backgrounds
+#### Backgrounds
 Simple Waves Animation [https://codingthai.com/simple-waves-animation/]
 Wicked background [https://wickedbackgrounds.com/backgrounds.html]
 
-####Features
+#### Features
 Sparkle Text [https://www.joshwcomeau.com/react/animated-sparkles-in-react/]

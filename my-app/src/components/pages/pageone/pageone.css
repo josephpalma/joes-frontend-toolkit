@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+
+.background {
+  background: url(../../../assets/wickedbackground.svg);
+  background-size: cover;
+}
+
+.page-content {
+  width: 100%;
+  height: 1000px;
+  align-content: center;
+  display: grid;
+  font-family: 'Knewave', cursive;
+  font-size: 34px;
+}

@@ -15,8 +15,9 @@ h1 {
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 14vmin;
   pointer-events: none;
+  fill: rgba(0,172,193,1);
 }
 
 @media (prefers-reduced-motion: no-preference) {

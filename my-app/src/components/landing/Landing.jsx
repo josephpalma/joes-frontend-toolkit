@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './landing.css';
 import logo from '../../assets/logo.svg';
+import palms from '../../assets/palms.svg';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 
 function Landing() {
@@ -12,7 +13,7 @@ function Landing() {
         <canvas id="gradient-canvas" data-transition-in>
         </canvas>
         <div class="inner-header flex">
-          <img src={logo} class="App-logo" alt="logo" width="150px" height="150px"/>
+          <img src={palms} class="App-logo" alt="logo" width="150px" height="150px"/>
           <h1><Sparkles>Palms</Sparkles> Design Tools</h1>
         </div>
 
