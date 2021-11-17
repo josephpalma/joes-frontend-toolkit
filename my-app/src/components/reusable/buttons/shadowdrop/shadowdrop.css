@@ -1,0 +1,33 @@
+.btn {
+  font-family: 'Pacifico', Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  transform: scale(.99);
+} 
+ 
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+} 
+ 
+.btn-shadow-drop {
+  position: relative;
+  background: rgb(249, 250, 250);
+  padding: 6px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out 0s;
+  left: -1px;
+  top: 0px;
+  width: 180px;
+} 
+ 
+.btn-shadow-drop:hover {
+  left: 4px;
+  top: 4px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;
+} 
+ 
+.btn-shadow-drop--black {
+  border: 1px solid rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
+  box-shadow: rgb(51, 51, 51) 4px 4px 0px 0px;
+} 
