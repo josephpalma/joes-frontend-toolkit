@@ -1,0 +1,36 @@
+.btn {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+} 
+ 
+.btn:hover .btn-slide-show-text1 {
+  margin-left: 65px;
+} 
+ 
+.btn-layered-3d > ::before {
+  box-sizing: border-box;
+} 
+ 
+.btn-layered-3d {
+  font-size: 18px;
+  min-width: 28px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0.75em;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out 0s, background 0.15s ease-out 0s;
+} 
+ 
+.btn-layered-3d:hover {
+  transform: translateX(0.25em);
+} 
+ 
+.btn-layered-3d:hover::before {
+  transform: translate3d(0px, 0.5em, -1em);
+} 
+ 
+.btn-layered-3d--orange {
+  color: black;
+  background: rgb(0,0,0,0.0);
+  border: 2px solid black;
+} 

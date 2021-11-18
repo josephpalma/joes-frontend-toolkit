@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './pageone.css';
 
-function PageOne() {
+function PageOne({color}) {
   return (
     <div class="background">
       <p class="page-content">

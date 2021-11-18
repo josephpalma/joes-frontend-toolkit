@@ -1,21 +1,78 @@
-import * as React from 'react';
 import './landing.css';
+import React, { useState } from 'react';
 import logo from '../../assets/logo.svg';
 import palms from '../../assets/palms.svg';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
+import useStickyState from '../reusable/sticky/UseStickyState.jsx';
+import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
+import { setIn } from 'formik';
+  
+function Landing({ color }) {
 
-function Landing() {
+  const [interval, setInterval] = useState(1);
+  let bodyStyles = document.body.style;
+
+  let increase = () => {
+    if (interval >= 5) {
+      setInterval(4)
+      return;
+    } else {
+      setInterval(interval + 1)
+    }
+
+    switch (interval) {
+      case 1:
+        bodyStyles.setProperty("--speed", 22 + 's');
+        break;
+      case 2:
+        bodyStyles.setProperty("--speed", 10 + 's');
+        break;
+      case 3:
+        bodyStyles.setProperty("--speed", 3 + 's');
+        break;
+      case 4:
+        bodyStyles.setProperty("--speed", 1 + 's');
+        break;
+    }
+  }
+
+  let decrease = () => {
+    if (interval < 1) {
+      setInterval(1)
+      return;
+    } else {
+      setInterval(interval - 1)
+    }
+
+    switch (interval) {
+      case 1:
+        bodyStyles.setProperty("--speed", 22 + 's');
+        break;
+      case 2:
+        bodyStyles.setProperty("--speed", 10 + 's');
+        break;
+      case 3:
+        bodyStyles.setProperty("--speed", 3 + 's');
+        break;
+      case 4:
+        bodyStyles.setProperty("--speed", 1 + 's');
+        break;
+    }
+  }
 
   return (
     <div>
-      <div class="header">
-        {/* <!--Content before waves--> */}
-        <canvas id="gradient-canvas" data-transition-in>
-        </canvas>
+      <div class="orbital-background landing" style={{ backgroundImage: `linear-gradient(90deg, #543AB7, ${color}, #3c196b)` }}>
         <div class="inner-header flex">
           <img src={palms} class="App-logo" alt="logo" width="150px" height="150px"/>
-          <h1><Sparkles>Palms</Sparkles> Design Tools</h1>
+          <h1>Joe's <Sparkles>Frontend</Sparkles> Toolkit</h1>
         </div>
+
+        <span>
+          <h4>Change wave speed?</h4>
+          <div onClick={() => increase()}><Layered3dButton text="+"></Layered3dButton></div>
+          <div onClick={() => decrease()}><Layered3dButton text="-"></Layered3dButton></div>
+        </span>
 
         {/* <!--Waves Container--> */}
         <div>
@@ -32,8 +89,8 @@ function Landing() {
             </g>
           </svg>
         </div>
-        {/* <!--Waves end--> */}
       </div>
+      {/* <!--Waves end--> */}
     </div>
   );
 }

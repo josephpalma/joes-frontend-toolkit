@@ -1,17 +1,20 @@
 @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+@import url('https://fonts.googleapis.com/css2?family=Knewave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Pacifico&display=swap');
+
+:root {
+  --speed: 48s;
+}
 
 h1 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Pacifico', sans-serif;
   font-weight:300;
   letter-spacing: 2px;
   font-size:48px;
 }
 
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
-  color:white;
+.landing {
+  margin: 0 !important;
 }
 
 .App-logo {
@@ -49,19 +52,19 @@ h1 {
 }
 .parallax > use:nth-child(1) {
   animation-delay: -2s;
-  animation-duration: 48s;
+  animation-duration: var(--speed);
 }
 .parallax > use:nth-child(2) {
   animation-delay: -3s;
-  animation-duration: 60s;
+  animation-duration: calc( var(--speed) + 12ms);
 }
 .parallax > use:nth-child(3) {
   animation-delay: -4s;
-  animation-duration: 66s;
+  animation-duration: calc( var(--speed) + 18ms);
 }
 .parallax > use:nth-child(4) {
   animation-delay: -5s;
-  animation-duration: 77s;
+  animation-duration: calc( var(--speed) + 30ms);
 }
 @keyframes move-forever {
   0% {
@@ -84,3 +87,5 @@ h1 {
     font-size:24px;
   }
 }
+
+
