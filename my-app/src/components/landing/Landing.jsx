@@ -5,59 +5,62 @@ import palms from '../../assets/palms.svg';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 import useStickyState from '../reusable/sticky/UseStickyState.jsx';
 import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
-import { setIn } from 'formik';
   
 function Landing({ color }) {
 
   const [interval, setInterval] = useState(1);
   let bodyStyles = document.body.style;
+  const max = 4;
+  const min = 1;
 
-  let increase = () => {
-    if (interval >= 5) {
-      setInterval(4)
-      return;
-    } else {
-      setInterval(interval + 1)
-    }
+  const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
-    switch (interval) {
+  let increase = (i) => {
+    i = clamp(i, min, max);
+    if (i === 1) { ++i; }
+    switch (i) {
       case 1:
-        bodyStyles.setProperty("--speed", 22 + 's');
+        bodyStyles.setProperty("--speed", 22 + 's'); //slowest
+        console.log("setting: slowest")
         break;
       case 2:
         bodyStyles.setProperty("--speed", 10 + 's');
+        console.log("setting: slow medium")
         break;
       case 3:
         bodyStyles.setProperty("--speed", 3 + 's');
+        console.log("setting: slow fast")
         break;
       case 4:
-        bodyStyles.setProperty("--speed", 1 + 's');
+        bodyStyles.setProperty("--speed", 1 + 's'); //fastest
+        console.log("setting: fast")
         break;
     }
+    setInterval(++i);
   }
 
-  let decrease = () => {
-    if (interval < 1) {
-      setInterval(1)
-      return;
-    } else {
-      setInterval(interval - 1)
-    }
-
-    switch (interval) {
+  let decrease = (i) => {
+    i = clamp(i, min, max);
+    if (i > 2) { --i; }
+    switch (i) {
       case 1:
-        bodyStyles.setProperty("--speed", 22 + 's');
+        bodyStyles.setProperty("--speed", 22 + 's'); //slowest
+        console.log("setting: slowest")
         break;
       case 2:
         bodyStyles.setProperty("--speed", 10 + 's');
+        console.log("setting: slow medium")
         break;
       case 3:
         bodyStyles.setProperty("--speed", 3 + 's');
+        console.log("setting: slow fast")
         break;
       case 4:
-        bodyStyles.setProperty("--speed", 1 + 's');
+        bodyStyles.setProperty("--speed", 1 + 's'); //fastest
+        console.log("setting: fast")
         break;
     }
+    setInterval(--i);
   }
 
   return (
@@ -70,8 +73,8 @@ function Landing({ color }) {
 
         <span>
           <h4>Change wave speed?</h4>
-          <div onClick={() => increase()}><Layered3dButton text="+"></Layered3dButton></div>
-          <div onClick={() => decrease()}><Layered3dButton text="-"></Layered3dButton></div>
+          <div onClick={() => increase(interval)}><Layered3dButton text="+"></Layered3dButton></div>
+          <div onClick={() => decrease(interval)}><Layered3dButton text="-"></Layered3dButton></div>
         </span>
 
         {/* <!--Waves Container--> */}
