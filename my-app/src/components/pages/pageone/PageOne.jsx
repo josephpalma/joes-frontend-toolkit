@@ -8,7 +8,7 @@ function PageOne({ color }) {
   return (
     <div class="background">
       <p class="page-content">
-        <i>Generated from <a href="https://wickedbackgrounds.com/backgrounds.html" target="_blank">Wicked Backgrounds</a></i>
+        <i class="animate__animated animate__zoomIn">Generated from <a href="https://wickedbackgrounds.com/backgrounds.html" target="_blank">Wicked Backgrounds</a></i>
         <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.dev/svgjs" viewBox="0 0 1920 1080">
           <rect width="1920" height="1080"></rect>
           <g transform={`matrix(7.04171909509728e-17,1.15,-1.15, 7.04171909509728e-17,1537.533790588379,-514.0138591766356)`}>

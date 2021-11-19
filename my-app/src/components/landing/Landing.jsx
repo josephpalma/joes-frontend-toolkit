@@ -1,4 +1,5 @@
 import './landing.css';
+import 'animate.css';
 import React, { useState, useEffect } from 'react';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
@@ -69,7 +70,7 @@ function Landing({ color }) {
       <div class="orbital-background landing" style={{ backgroundImage: `linear-gradient(45deg, #26a66e 15%, ${color}, #26a66e 85%)` }}>
         
         <div class="inner-header flex">
-          <h1>Joe's <Sparkles>Frontend</Sparkles> Toolkit</h1>
+          <h1 class="animate__animated animate__bounce">Joe's <Sparkles>Frontend</Sparkles> Toolkit</h1>
         </div>
 
         <div style={{margin: "-10px 0 30px 0"}}>
