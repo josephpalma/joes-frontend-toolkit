@@ -9,3 +9,4 @@ Wicked background [https://wickedbackgrounds.com/backgrounds.html]
 #### Features
 Sparkle Text [https://www.joshwcomeau.com/react/animated-sparkles-in-react/]
 Use Sticky State [https://www.joshwcomeau.com/react/persisting-react-state-in-localstorage/]
+useScript Component

@@ -4,17 +4,17 @@ import Landing from './components/landing/Landing.jsx';
 import Footer from './components/footer/Footer.jsx';
 import PageOne from './components/pages/pageone/PageOne.jsx';
 import PageTwo from './components/pages/pagetwo/PageTwo';
-import useStickyState from './components/reusable/sticky/UseStickyState';
+import useStickyState from './components/hooks/stickyState/UseStickyState';
 
 function App() {
-  const [color, setColor] = useState("none");
-    console.log(color)
+  const [color, setColor] = useStickyState("teal", "color");
+
   
   return (
     <div className="App">
       <Landing color={color}/>
       <PageOne color={color}/>
-      <PageTwo callback={(e) => setColor(e)} />
+      <PageTwo callback={(e) => setColor(e)} curColor={color} />
       <Footer />
     </div>
   );
