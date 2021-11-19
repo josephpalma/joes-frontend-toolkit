@@ -66,7 +66,7 @@ function Landing({ color }) {
         <path fill={color}  fill-opacity=".2" d="M-100 -100L200 -100L200 50L-100 50Z" style={{ animation: "path1 12.5s linear infinite alternate" }} />
         <path fill={color}  fill-opacity="1" d="M-100 -100L200 -100L200 20L-100 20Z" style={{ animation: "path2 30s linear infinite alternate" }} />
       </svg>
-      <div class="orbital-background landing" style={{ backgroundImage: `linear-gradient(90deg, #543AB7, ${color}, #3c196b)` }}>
+      <div class="orbital-background landing" style={{ backgroundImage: `linear-gradient(45deg, #26a66e 15%, ${color}, #26a66e 85%)` }}>
         
         <div class="inner-header flex">
           <h1>Joe's <Sparkles>Frontend</Sparkles> Toolkit</h1>

@@ -26,7 +26,7 @@ function PageTwo({callback, curColor}) {
 
   return (
     <div>
-      <div class="orbital-background" style={{ backgroundImage: `linear-gradient(90deg, #543AB7, ${color}, #3c196b)`}}>
+      <div class="orbital-background" style={{ backgroundImage: `linear-gradient(90deg, #26a66e, ${color}, #26a66e)`}}>
         <div class="form-container">
           <div class="form-box" style={{background: `${color}`}}>
             <div>
