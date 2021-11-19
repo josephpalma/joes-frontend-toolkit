@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import './pagetwo.css';
 import { Formik, Field, Form } from 'formik';
 import ShadowDropButton from '../../reusable/buttons/shadowdrop/ShadowDropButton.jsx';
-import useStickyState from '../../reusable/sticky/UseStickyState.jsx';
 
 //background: https://pocoloco.io/
-function PageTwo({callback}) {
+function PageTwo({callback, curColor}) {
 
-  const [submitted, setSubmitted] = useStickyState(false);
-  const [color, setColor] = useState("none", "color");
+  const [submitted, setSubmitted] = useState(false);
+  const [color, setColor] = useState(curColor, "color");
 
   //Dan Davis: https://stackoverflow.com/questions/48484767/javascript-check-if-string-is-valid-css-color
   const isColor = (strColor) => {

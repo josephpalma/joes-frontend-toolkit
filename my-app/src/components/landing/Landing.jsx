@@ -1,18 +1,15 @@
 import './landing.css';
-import React, { useState } from 'react';
-import logo from '../../assets/logo.svg';
-import palms from '../../assets/palms.svg';
+import React, { useState, useEffect } from 'react';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
-import useStickyState from '../reusable/sticky/UseStickyState.jsx';
 import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
-  
-function Landing({ color }) {
+import importScript from '../hooks/useScript/UseScript.jsx';
 
+function Landing({ color }) {
   const [interval, setInterval] = useState(1);
   let bodyStyles = document.body.style;
   const max = 4;
   const min = 1;
-
+  importScript("https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js");
   const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
   let increase = (i) => {
@@ -65,17 +62,21 @@ function Landing({ color }) {
 
   return (
     <div>
+      <svg class="background--custom" id="demo" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <path fill={color}  fill-opacity=".2" d="M-100 -100L200 -100L200 50L-100 50Z" style={{ animation: "path1 12.5s linear infinite alternate" }} />
+        <path fill={color}  fill-opacity="1" d="M-100 -100L200 -100L200 20L-100 20Z" style={{ animation: "path2 30s linear infinite alternate" }} />
+      </svg>
       <div class="orbital-background landing" style={{ backgroundImage: `linear-gradient(90deg, #543AB7, ${color}, #3c196b)` }}>
+        
         <div class="inner-header flex">
-          <img src={palms} class="App-logo" alt="logo" width="150px" height="150px"/>
           <h1>Joe's <Sparkles>Frontend</Sparkles> Toolkit</h1>
         </div>
 
-        <span>
+        <div style={{margin: "-10px 0 30px 0"}}>
           <h4>Change wave speed?</h4>
           <div onClick={() => increase(interval)}><Layered3dButton text="+"></Layered3dButton></div>
           <div onClick={() => decrease(interval)}><Layered3dButton text="-"></Layered3dButton></div>
-        </span>
+        </div>
 
         {/* <!--Waves Container--> */}
         <div>

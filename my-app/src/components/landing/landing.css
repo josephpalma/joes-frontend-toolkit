@@ -15,6 +15,8 @@ h1 {
 
 .landing {
   margin: 0 !important;
+  position: initial;
+  z-index: -2;
 }
 
 .App-logo {
@@ -88,4 +90,39 @@ h1 {
   }
 }
 
-
+path {
+  transform-origin: 50% 0%;
+}
+.background--custom {
+  background-color:rgba(0,0,0,0.0);
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  margin-top: -100px;
+}
+@keyframes path0 {
+  0% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+@keyframes path1 {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes path2 {
+  0% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(-40deg);
+  }
+}
