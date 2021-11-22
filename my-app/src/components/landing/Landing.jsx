@@ -6,7 +6,7 @@ import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
 import importScript from '../hooks/useScript/UseScript.jsx';
 
 function Landing({ color }) {
-  const [interval, setInterval] = useState(1);
+  let [interval, setInterval] = useState(1);
   let bodyStyles = document.body.style;
   const max = 4;
   const min = 1;
@@ -36,12 +36,11 @@ function Landing({ color }) {
       default:
         return;
     }
-    setInterval(++i);
+    setInterval(i);
   }
 
   let decrease = (i) => {
     i = clamp(i, min, max);
-    if (i > 2) { --i; }
     switch (i) {
       case 1:
         bodyStyles.setProperty("--speed", 22 + 's'); //slowest
@@ -62,7 +61,7 @@ function Landing({ color }) {
       default:
         return;
     }
-    setInterval(--i);
+    setInterval(i);
   }
 
   return (
@@ -79,8 +78,8 @@ function Landing({ color }) {
 
         <div style={{margin: "-10px 0 30px 0"}}>
           <h4>Change wave speed?</h4>
-          <div onClick={() => increase(interval)}><Layered3dButton text="+"></Layered3dButton></div>
-          <div onClick={() => decrease(interval)}><Layered3dButton text="-"></Layered3dButton></div>
+          <div onClick={() => increase(++interval)}><Layered3dButton text="+"></Layered3dButton></div>
+          <div onClick={() => decrease(--interval)}><Layered3dButton text="-"></Layered3dButton></div>
         </div>
 
         {/* <!--Waves Container--> */}
