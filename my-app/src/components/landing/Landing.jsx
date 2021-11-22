@@ -1,6 +1,6 @@
 import './landing.css';
 import 'animate.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
 import importScript from '../hooks/useScript/UseScript.jsx';
@@ -33,6 +33,8 @@ function Landing({ color }) {
         bodyStyles.setProperty("--speed", 1 + 's'); //fastest
         console.log("setting: fast")
         break;
+      default:
+        return;
     }
     setInterval(++i);
   }
@@ -57,6 +59,8 @@ function Landing({ color }) {
         bodyStyles.setProperty("--speed", 1 + 's'); //fastest
         console.log("setting: fast")
         break;
+      default:
+        return;
     }
     setInterval(--i);
   }

@@ -30,7 +30,7 @@ function PageTwo({callback, curColor}) {
         <div class="form-container">
           <div class="form-box" style={{background: `${color}`}}>
             <div>
-              {color != "none" ? <h3>🎨 Your favorite color is <u>{color}</u>, care to change it?</h3> : <h3>🎨 Whats your favorite color???</h3>}
+              {color !== "none" ? <h3>🎨 Your favorite color is <u>{color}</u>, care to change it?</h3> : <h3>🎨 Whats your favorite color???</h3>}
             </div>
             <div>
               <Formik initialValues={{ color: '' }} onSubmit={(e) => { isColor(e);}} >
@@ -42,7 +42,7 @@ function PageTwo({callback, curColor}) {
             </div>
             {submitted ?
               <div>
-                <h4>Your favorite color has been saved using <a href="https://www.joshwcomeau.com/react/persisting-react-state-in-localstorage/" target="_blank">Persisting State Storage</a></h4>
+                <h4>Your favorite color has been saved using <a href="https://www.joshwcomeau.com/react/persisting-react-state-in-localstorage/" target="_blank" rel="noreferrer">Persisting State Storage</a></h4>
                 <h4>Try refreshing!!</h4>
                 <h5 style={{ fontSize: "12px" }}><i>*Does not apply to SSR applications</i></h5>
               </div> : null

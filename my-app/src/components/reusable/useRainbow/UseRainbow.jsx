@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 * Argument: objId - id attribute of html element to rainbow.
 * Author: Rafal Pastuszak https://sonnet.io/posts/use-rainbow/
 */
-export const UseRainbow = (objId) => {
+const UseRainbow = (objId) => {
   useEffect(() => {
     const cb = () => {
       const viewportHeight = window.innerHeight;

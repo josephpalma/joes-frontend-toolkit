@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import Landing from './components/landing/Landing.jsx';
 import Footer from './components/footer/Footer.jsx';
