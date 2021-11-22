@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './pageone.css';
 
 
@@ -6,9 +6,10 @@ function PageOne({ color }) {
   let bodyStyles = document.body.style;
   bodyStyles.setProperty("--page-one-color", color);
   return (
+    <div>
     <div class="background">
       <p class="page-content">
-        <i class="animate__animated animate__zoomIn">Generated from <a href="https://wickedbackgrounds.com/backgrounds.html" target="_blank">Wicked Backgrounds</a></i>
+          <i class="animate__animated animate__zoomIn">Generated from <a href="https://wickedbackgrounds.com/backgrounds.html" target="_blank" rel="noreferrer">Wicked Backgrounds</a></i>
         <svg class="svg-background" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlnsSvgjs="http://svgjs.dev/svgjs" viewBox="0 0 1920 1080">
           <rect width="1920" height="1080"></rect>
           <g transform={`matrix(7.04171909509728e-17,1.15,-1.15, 7.04171909509728e-17,1537.533790588379,-514.0138591766356)`}>
@@ -36,13 +37,12 @@ function PageOne({ color }) {
             </linearGradient>
           </defs>
         </svg>
-
-
       </p>
         <svg width="100%" height="100%" style={{margin:"10px 0 -110px 0"}} viewBox="0 0 1441 191" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M326.5 0H0.500061L0.500091 190.5C0.500091 190.5 34.14 181.143 55.5 174.5C85.8235 165.069 108.955 155.441 131.884 145.897C156.33 135.722 180.545 125.642 213 116C278.393 96.5719 315.851 86.7896 383.5 78C444.474 70.0778 479.57 70.2289 540.482 70.4913L542.5 70.5C637.134 70.9061 690.262 77.506 784 90.5C857.864 100.739 935.438 119.07 994.779 133.093C1026.52 140.595 1053.05 146.863 1071 150C1122.5 159 1384.5 190.5 1440.5 166V0H326.5Z" fill="#26A66E" />
           <path d="M326.5 0H0.500061L0.500091 190.5C0.500091 190.5 34.14 181.143 55.5 174.5C85.8235 165.069 108.955 155.441 131.884 145.897C156.33 135.722 180.545 125.642 213 116C278.393 96.5719 315.851 86.7896 383.5 78C444.474 70.0778 479.57 70.2289 540.482 70.4913L542.5 70.5C637.134 70.9061 690.262 77.506 784 90.5C857.864 100.739 935.438 119.07 994.779 133.093C1026.52 140.595 1053.05 146.863 1071 150C1122.5 159 1384.5 190.5 1440.5 166V0H326.5Z" />
         </svg>
+      </div>
     </div>
   );
 }
