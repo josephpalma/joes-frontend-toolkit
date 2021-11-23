@@ -1,10 +1,9 @@
 import React from 'react';
 import './pageone.css';
 
-
 function PageOne({ color }) {
   let bodyStyles = document.body.style;
-  bodyStyles.setProperty("--page-one-color", color);
+  bodyStyles.setProperty("--page-one-color", color);  
   return (
     <div>
     <div class="background">

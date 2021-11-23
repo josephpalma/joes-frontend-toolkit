@@ -1,3 +1,5 @@
+// Source here: https://joshwcomeau.com/snippets/react-hooks/use-prefers-reduced-motion
+
 import * as React from 'react';
 
 const QUERY = '(prefers-reduced-motion: no-preference)';

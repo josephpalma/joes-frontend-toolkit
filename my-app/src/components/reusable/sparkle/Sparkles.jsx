@@ -1,6 +1,6 @@
 import * as React from 'react';
-import useRandomInterval from './useRandomInterval.js';
-import usePrefersReducedMotion from './usePrefersReducedMotion.js';
+import useRandomInterval from '../../hooks/useRandomInterval/useRandomInterval.js';
+import usePrefersReducedMotion from '../../hooks/usePrefersReducedMotion/usePrefersReducedMotion.js';
 import random from './random.js';
 import range from './range.js'
 import styled, {keyframes} from 'styled-components';

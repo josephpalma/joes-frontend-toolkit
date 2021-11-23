@@ -1,11 +1,11 @@
 import React, { Suspense, useState } from 'react';
 import './pagethree.css';
-import UseRainbow from '../../reusable/useRainbow/UseRainbow.jsx';
+import useRainbow from '../../hooks/useRainbow/useRainbow.js';
 import useFetch from '../../hooks/useApiCall/useFetch';
 const Image = React.lazy(() => import('./Image.jsx'));
 
 function PageOne({ color }) {
-  UseRainbow("rainbow-background");
+  useRainbow("rainbow-background");
   let bodyStyles = document.body.style;
   bodyStyles.setProperty("--background-color", color);
 
