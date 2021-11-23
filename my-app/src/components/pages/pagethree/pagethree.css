@@ -23,6 +23,12 @@
   grid-row-gap: 20px;
 }
 
+.static {
+  margin: 10px 0 10px 0;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
 .picture-container {
   background-color: var(--background-color);
   display: flex;
@@ -33,7 +39,7 @@
 }
 
 .info-box {
-  width: max-content;
+  width: 250px;
   padding: 25px;
   border: outset;
   background-color: var(--background-color);

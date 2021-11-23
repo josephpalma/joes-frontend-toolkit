@@ -2,17 +2,35 @@ import React, { Suspense, useState } from 'react';
 import './pagethree.css';
 import useRainbow from '../../hooks/useRainbow/useRainbow.js';
 import useFetch from '../../hooks/useApiCall/useFetch';
-const Image = React.lazy(() => import('./Image.jsx'));
+import PopOutButton from '../../reusable/buttons/popoutbutton/PopOutButton';
+import useSound from 'use-sound';
+import rave from '../../../assets/rave.mp3';
 
 function PageOne({ color }) {
+  const [playbackRate, setPlaybackRate] = React.useState(.75);
+  const [play] = useSound(rave, {
+    playbackRate,
+    volume: 0.2,
+  });
   useRainbow("rainbow-background");
   let bodyStyles = document.body.style;
   bodyStyles.setProperty("--background-color", color);
+  const Image = React.lazy(() => import('./Image.jsx'));
 
   const [apiList, setApiList] = useState([
     { url: "https://api.imgflip.com/get_memes", name: "memes" },
   ]);
   let data = useFetch({ url: apiList[0].url });
+
+  let raveOn = () => {
+    if (playbackRate > 1.5) {
+      setPlaybackRate(playbackRate - 0.1);
+      play(rave);
+      return;
+    }
+    setPlaybackRate(playbackRate + 0.1);
+    play(rave);
+  }
 
   if (!data) {
     return (<><h1>Loading...</h1></>);
@@ -24,12 +42,19 @@ function PageOne({ color }) {
         <div id="rainbow-background">
           <div class="parent">
             <div class="row-1">
-              <div class="picture-grid">
+              <div class="picture-grid static">
                 <div class="info-box">
-                  <h1>MEMES</h1>
-                  <h3>This Api has been loaded using the custom useFetch hook</h3>
-                  <h3>Images are loaded using <a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">React Lazy Load Component</a>
-                  </h3>
+                  <h3>Care for some Memes?</h3>
+                  <h4>This Api has been loaded using the custom useFetch hook</h4>
+                </div>
+              </div>
+              <div class="picture-grid static">
+                <div class="info-box">
+                  <h3>How about some Rave?</h3>
+                  <h4><a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">useSound</a> by Josh Comeau</h4>
+                  <h4>Images are loaded using <a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">React Lazy Load Component</a>
+                  </h4>
+                  <div onClick={() => raveOn()}><PopOutButton text="RAVE" style={{ marginTop: "25px", background: color }}></PopOutButton></div>
                 </div>
               </div>
             </div>

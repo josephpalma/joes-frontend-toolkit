@@ -5,7 +5,10 @@ import Sparkles from '../reusable/sparkle/Sparkles.jsx';
 import Layered3dButton from '../reusable/buttons/layered3d/Layered3d.jsx';
 import importScript from '../hooks/useScript/UseScript.jsx';
 
+
+
 function Landing({ color }) {
+
   let [interval, setInterval] = useState(1);
   let bodyStyles = document.body.style;
   const max = 4;
@@ -15,23 +18,20 @@ function Landing({ color }) {
 
   let increase = (i) => {
     i = clamp(i, min, max);
+
     if (i === 1) { ++i; }
     switch (i) {
       case 1:
         bodyStyles.setProperty("--speed", 22 + 's'); //slowest
-        console.log("setting: slowest")
         break;
       case 2:
         bodyStyles.setProperty("--speed", 10 + 's');
-        console.log("setting: slow medium")
         break;
       case 3:
         bodyStyles.setProperty("--speed", 3 + 's');
-        console.log("setting: slow fast")
         break;
       case 4:
         bodyStyles.setProperty("--speed", 1 + 's'); //fastest
-        console.log("setting: fast")
         break;
       default:
         return;
@@ -44,19 +44,15 @@ function Landing({ color }) {
     switch (i) {
       case 1:
         bodyStyles.setProperty("--speed", 22 + 's'); //slowest
-        console.log("setting: slowest")
         break;
       case 2:
         bodyStyles.setProperty("--speed", 10 + 's');
-        console.log("setting: slow medium")
         break;
       case 3:
         bodyStyles.setProperty("--speed", 3 + 's');
-        console.log("setting: slow fast")
         break;
       case 4:
         bodyStyles.setProperty("--speed", 1 + 's'); //fastest
-        console.log("setting: fast")
         break;
       default:
         return;
