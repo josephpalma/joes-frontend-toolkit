@@ -5,6 +5,8 @@ import useFetch from '../../hooks/useApiCall/useFetch';
 import PopOutButton from '../../reusable/buttons/popoutbutton/PopOutButton';
 import useSound from 'use-sound';
 import rave from '../../../assets/rave.mp3';
+import Spacer from '../../reusable/spacer/Spacer.jsx';
+import ShiftBy from '../../reusable/shifter/ShiftBy';
 
 function PageOne({ color }) {
   const [playbackRate, setPlaybackRate] = React.useState(.75);
@@ -39,6 +41,7 @@ function PageOne({ color }) {
     cleanData.shift();
     return (
       <div>
+        <div class="transition-gradient-bottom"></div>
         <div id="rainbow-background">
           <div class="parent">
             <div class="row-1">
@@ -46,17 +49,20 @@ function PageOne({ color }) {
                 <div class="info-box">
                   <h3>Care for some Memes?</h3>
                   <h4>This Api has been loaded using the custom useFetch hook</h4>
-                </div>
-              </div>
-              <div class="picture-grid static">
-                <div class="info-box">
-                  <h3>How about some Rave?</h3>
-                  <h4><a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">useSound</a> by Josh Comeau</h4>
                   <h4>Images are loaded using <a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">React Lazy Load Component</a>
                   </h4>
-                  <div onClick={() => raveOn()}><PopOutButton text="RAVE" style={{ marginTop: "25px", background: color }}></PopOutButton></div>
                 </div>
               </div>
+              <Spacer axis="vertical" size={32} />
+              <ShiftBy y={-3}>
+                <div class="picture-grid static">
+                  <div class="info-box">
+                    <h3>How about some Rave?</h3>
+                    <h4><a href="https://reactjs.org/docs/code-splitting.html#reactlazy" target="_blank">useSound</a> by Josh Comeau</h4>
+                    <div onClick={() => raveOn()}><PopOutButton text="RAVE" style={{ marginTop: "25px", background: color }}></PopOutButton></div>
+                  </div>
+                </div>
+              </ShiftBy>
             </div>
 
             <div class="row-2">
