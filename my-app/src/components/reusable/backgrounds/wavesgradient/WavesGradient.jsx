@@ -1,6 +1,17 @@
 import React from 'react';
 import './wavesgradient.css'
 
+/*
+* A Custom React Component for designing a background with animated waves, a top menu bar and gradient
+* Author: Coding Thai https://codingthai.com/simple-waves-animation/
+* Arguments:
+*   - priColor (str): primary animated gradient color, default: red
+*   - secColor (str): secondary background color, default: orange
+*   - degrees (int): degrees shift of gradient, defualt 90deg
+*   - speed (int): speed of waves in seconds, default: 22s
+*   - isTop (boolean): boolean to display the top menu bar gradient animation
+*   - content (Html DOM Object): html content to display within background, default: empty <div />
+*/
 function WavesGradient({
   priColor = "red",
   secColor = "orange",

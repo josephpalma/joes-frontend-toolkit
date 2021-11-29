@@ -17,7 +17,6 @@ function Landing({ color }) {
   let [speed, setSpeed] = useState(22);
   const max = 4;
   const min = 1;
-
   
   let increase = (i) => {
     i = clamp(i, min, max);
