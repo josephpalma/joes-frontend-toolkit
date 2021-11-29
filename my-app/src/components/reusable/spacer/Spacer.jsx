@@ -9,6 +9,7 @@
 ** Produces a 16px × 16px gap: <Spacer size={16} />
 ** Produces a 32px × 1px gap: <Spacer axis="horizontal" size={32} />
 */
+
 //TODO: implement responsive spacer using 'when' argument
 // ex: <Spacer
 // size = { 32}
