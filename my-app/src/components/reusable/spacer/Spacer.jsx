@@ -2,7 +2,7 @@
 * 90's style spacer div. Creates a spacer based on the args.
 * Author: Josh Comeau https://www.joshwcomeau.com/react/modern-spacer-gif/
 * Arguemnts:
-** size (required) - size to create spacer. creates square spacer is no other args provided.
+** size (required) - spacer size. Default square spacer if no other args provided.
 ** axis - horizontal or vertical
 ** style - additional css styles
 * Examples:

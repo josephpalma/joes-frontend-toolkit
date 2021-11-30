@@ -1,9 +1,9 @@
 import React from 'react';
 import './pageone.css';
 
+// https://wickedbackgrounds.com/backgrounds.html
 function PageOne({ color }) {
-  let bodyStyles = document.body.style;
-  bodyStyles.setProperty("--page-one-color", color);  
+  document.body.style.setProperty("--page-one-color", color);
   return (
     <div>
     <div class="background">
