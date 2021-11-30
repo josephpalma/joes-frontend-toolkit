@@ -15,14 +15,9 @@ function PageOne({ color }) {
     volume: 0.2,
   });
   useRainbow("rainbow-background");
-  let bodyStyles = document.body.style;
-  bodyStyles.setProperty("--background-color", color);
+  document.body.style.setProperty("--background-color", color);
   const Image = React.lazy(() => import('./Image.jsx'));
-
-  const [apiList, setApiList] = useState([
-    { url: "https://api.imgflip.com/get_memes", name: "memes" },
-  ]);
-  let data = useFetch({ url: apiList[0].url });
+  let data = useFetch({ url: "https://api.imgflip.com/get_memes"});
 
   let raveOn = () => {
     if (playbackRate > 1.5) {
@@ -42,7 +37,7 @@ function PageOne({ color }) {
     return (
       <div>
         <div class="transition-gradient-bottom"></div>
-        <div id="rainbow-background">
+        <div id="rainbow-background" style={{backgroundColor: color}}>
           <div class="parent">
             <div class="row-1">
               <div class="picture-grid static">

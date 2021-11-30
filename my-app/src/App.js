@@ -4,7 +4,7 @@ import Landing from './components/landing/Landing.jsx';
 import Footer from './components/footer/Footer.jsx';
 import PageOne from './components/pages/pageone/PageOne.jsx';
 import PageTwo from './components/pages/pagetwo/PageTwo';
-import useStickyState from './components/hooks/stickyState/UseStickyState';
+import useStickyState from './components/hooks/stickyState/useStickyState';
 import PageThree from './components/pages/pagethree/PageThree.jsx';
 
 function App() {
