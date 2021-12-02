@@ -23,6 +23,9 @@ A way to shift a web component by a specified square pixel size. Supply an x and
 [Spacer](https://www.joshwcomeau.com/react/modern-spacer-gif/)  
 An old school way to space web components. Supply a square pixel value, a horizontal/vertical orientation.
 
+[Snowflakes](https://pajasevi.github.io/CSSnowflakes/)
+Renders snowflakes during christmas time. A great way to make your site festive.
+
 
 <br />
 
