@@ -15,15 +15,8 @@ function Landing({ color }) {
   
   let [interval, setInterval] = useState(1);
   let [speed, setSpeed] = useState(22);
-  let [snow, setSnow] = useState(false);
   const max = 4;
   const min = 1;
-  let d = new Date();
-  console.log(d.getFullYear(), d.getMonth(), d.getDate())
-
-  if (!snow && d.getMonth() === 11 && d.getDate() > 9 && d.getDate() < 28) {
-    setSnow(true); //if its christmas time, render snowflakes
-  }
   
   let increase = (i) => {
     i = clamp(i, min, max);
@@ -79,7 +72,7 @@ function Landing({ color }) {
 
   return (
     <div>
-      {snow ? <Snowflakes /> : null}
+      <Snowflakes />
       <WavesGradient
         priColor={color} 
         secColor={"#26a66e"}
